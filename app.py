@@ -8,7 +8,7 @@ app = Flask(__name__)
 CORS(app, origins=["*"])
 
 
-@app.route("/", methods=["GET"])
+@app.route("/resume.pdf", methods=["GET"])
 def get_pdf():
     url = "https://github.com/anmho/resume/raw/main/main.pdf"
     response = requests.get(url, stream=True)
